@@ -49,6 +49,7 @@ function showMillionaires() {
 function calculateWealth() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
   const wealthEl = document.createElement('div');
+  wealthEl.classList.add('total-wealth');
   wealthEl.innerHTML = `<h3>Total :<strong>${formatMoney(
     wealth
   )}</strong></h3>`;
